@@ -1,0 +1,26 @@
+html, body {
+    background-color: #303030;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: monospace;
+}
+
+header, main, footer {
+    max-width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: xxx-large;
+}
+
+h2 {
+    font-size: xx-large;
+}
