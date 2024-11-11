@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for article in articles_page.object_list %}
+    <article class="post">
+        <header>
+            <h2><a href="{{ article.url }}">{{ article.title}}</a></h2>
+
+            <div class="summary-containter">
+                <p>{{ article.summary }}</p>
+                <time class="published" datetime="{{ article.date | strftime('%Y-%m-%d') }}">{{ article.date | strftime('%b %-d, %Y') }}</time>
+            </div>
+        </header>
+
+    </article>
+
+{% endfor %}
+
+{% endblock %}
