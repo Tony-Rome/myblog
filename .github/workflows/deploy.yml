@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     permissions:
       pages: write
@@ -30,10 +30,11 @@ jobs:
 
       - name: Generate static ste
         run: |
-          pelican content
+          pelican content -o output -s pelicanconf.py
 
       - name: Deploy to github pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: './output'
+          publish_branch: 'gh-pages'
